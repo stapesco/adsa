@@ -8,6 +8,8 @@
 > Five AST-based checks, one safe auto-fix, one pre-commit hook, zero
 > telemetry, zero config. Runs offline.
 
+Want to know more about ADSA? [adaptivedualsystem.com](https://adaptivedualsystem.com/)
+
 ## Why
 
 Three failure modes repeat across every TypeScript service that lacks an
