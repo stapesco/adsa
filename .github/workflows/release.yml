@@ -34,13 +34,9 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm test
-      # Trusted publishing via OIDC. No long-lived npm token required.
-      # Configure the trust relationship once at:
-      #   https://www.npmjs.com/package/stapes-adsa/access
-      #   → "Add a trusted publisher" → GitHub Actions
-      #   → owner=stapesco, repo=adsa, workflow=release.yml
-      # npm 9.5+ detects the OIDC token automatically and publishes with provenance.
       - run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Create GitHub release
         uses: softprops/action-gh-release@v2
         with:
