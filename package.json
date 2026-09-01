@@ -1,0 +1,66 @@
+{
+  "name": "stapes-adsa",
+  "version": "1.0.0",
+  "description": "AST-based ADSA (Adaptive Dual-System Architecture) linter for TypeScript. Flags slow paths without logging, fast paths doing I/O, decision points without routing, async boundaries missing the adsa_path log line, and invalid {adsa_path, adsa_area} shapes. Auto-fix safe insertions. Install as pre-commit hook. Stable --json for AI agents. Zero telemetry. MIT.",
+  "license": "MIT",
+  "author": "stapesco <github@stapes.co.za>",
+  "homepage": "https://github.com/stapesco/adsa",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stapesco/adsa.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stapesco/adsa"
+  },
+  "keywords": [
+    "adsa",
+    "fast-path",
+    "slow-path",
+    "logging",
+    "observability",
+    "ast",
+    "ts-morph",
+    "typescript",
+    "linter",
+    "static-analysis",
+    "pre-commit",
+    "git-hooks",
+    "ai-agent",
+    "cli",
+    "npx",
+    "zero-config",
+    "stapes"
+  ],
+  "bin": {
+    "stapes-adsa": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "AGENTS.md",
+    "SKILL.md",
+    "CHANGELOG.md",
+    "SECURITY.md",
+    "LICENSE"
+  ],
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "tsc",
+    "prepublishOnly": "npm run build && npm test",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0"
+  },
+  "dependencies": {
+    "commander": "^11.1.0",
+    "ts-morph": "^22.0.0"
+  }
+}

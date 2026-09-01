@@ -1,0 +1,35 @@
+node_modules/
+*.log
+.DS_Store
+coverage/
+.vitest-cache/
+
+# Secrets (12-factor III)
+.env
+.env.*
+!.env.example
+
+# TypeScript incremental build cache
+*.tsbuildinfo
+
+# npm debug logs (in addition to the *.log wildcard above)
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Coverage artifacts
+.nyc_output
+
+# Deepsec state
+.deepsec/data/
+
+# GitHub
+.github/
+
+# Build artifacts
+dist/
+
+# Agent-generated content (not for commit)
+.claude/
+graphify-out/
