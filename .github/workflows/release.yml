@@ -37,6 +37,13 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm test
+      - name: Diagnose npm auth
+        run: |
+          echo "token length: ${#NODE_AUTH_TOKEN}"
+          npm whoami --registry https://registry.npmjs.org || echo "whoami failed"
+          npm access list packages stapesco --json || echo "access list failed"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
