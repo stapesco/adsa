@@ -5,6 +5,32 @@ All notable changes to `stapes-adsa` are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.2] - 2026-11-08
+
+### Fixed
+
+- **The documented import path now resolves.** The README tells users to
+  `import { withAdsaLogging } from "stapes-adsa/lib/instrument"`. That
+  import failed with `ERR_MODULE_NOT_FOUND` in every consumer install
+  from v1.0.0 through v1.1.1. The package published `dist/` but declared
+  no `exports` map, so the documented path resolved to nothing.
+  The package now declares an `exports` map. `stapes-adsa/lib/instrument`
+  and the package root `stapes-adsa` both resolve to the helper. The deep
+  path `stapes-adsa/dist/lib/instrument.js` keeps working, so no upgrade
+  breaks an existing import.
+
+### Documentation
+
+- The README and AGENTS.md sample output names the current version.
+
+### Tests
+
+- `test/package-exports.test.ts` packs the package, installs the tarball
+  into a scratch project, and imports it through each published path.
+  The defect that shipped through three releases is now a failing build.
+- `test/doc-version.test.ts` fails the build when a version bump leaves
+  the documentation behind.
+
 ## [1.1.1] - 2026-11-08
 
 ### Fixed

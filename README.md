@@ -52,7 +52,7 @@ commit. Warnings print and let the commit pass.
 
 ```text
 $ npx stapes-adsa
-stapes-adsa@1.1.1
+stapes-adsa@1.1.2
 
 ✗ fast-path-with-io        1 finding(s)
   src/auth/verify.ts:12:1
@@ -76,8 +76,8 @@ npx stapes-adsa --json | jq '.exitCode, .findings[].message'
 ```json
 {
   "startedAt": "2026-09-01T10:49:45.195Z",
-  "tool": "stapes-adsa@1.1.1",
-  "version": "1.1.1",
+  "tool": "stapes-adsa@1.1.2",
+  "version": "1.1.2",
   "exitCode": 1,
   "checkCount": 5,
   "failed": 1,

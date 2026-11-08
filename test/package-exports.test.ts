@@ -69,6 +69,13 @@ describe("consumer package imports", () => {
     expect(keys).toContain("withAdsaLogging");
   });
 
+  it("a deep dist import still resolves", () => {
+    // The exports map must not lock out the pre-map deep path. Anyone who
+    // found it before v1.1.2 could otherwise break on upgrade.
+    const keys = importInConsumer("stapes-adsa/dist/lib/instrument.js");
+    expect(keys).toContain("withAdsaLogging");
+  });
+
   it("the CLI binary runs", () => {
     const out = execFileSync(
       process.execPath,

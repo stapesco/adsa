@@ -55,7 +55,7 @@ only our marker block, leaves Husky / lefthook / etc. intact.
 Default (human):
 
 ```
-stapes-adsa@1.1.1
+stapes-adsa@1.1.2
 
 ✗ fast-path-with-io        1 finding(s)
   src/auth/verify.ts:12:1
@@ -70,8 +70,8 @@ stapes-adsa@1.1.1
 ```json
 {
   "startedAt": "2026-09-01T10:49:45.195Z",
-  "tool": "stapes-adsa@1.1.1",
-  "version": "1.1.1",
+  "tool": "stapes-adsa@1.1.2",
+  "version": "1.1.2",
   "exitCode": 1,
   "checkCount": 5,
   "failed": 1,
@@ -166,7 +166,7 @@ The other three checks (`fast-path-with-io`, `decision-router`, `log-schema`) ar
 }
 ```
 
-## Known limitations (v1.1.1)
+## Known limitations (v1.1.2)
 
 - TypeScript only. No Python, Go, Rust, Java support.
 - No per-check config files. The five checks have fixed heuristics.
@@ -202,7 +202,7 @@ Built by stapes.
 <!-- gitnexus:start -->
 # GitNexus — Code Intelligence
 
-This project is indexed by GitNexus as **adsa** (472 symbols, 503 relationships, 0 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
+This project is indexed by GitNexus as **adsa** (492 symbols, 528 relationships, 0 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
 
 > If any GitNexus tool warns the index is stale, run `npx gitnexus analyze` in terminal first.
 

@@ -1,6 +1,6 @@
 {
   "name": "stapes-adsa",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "AST-based ADSA (Adaptive Dual-System Architecture) linter for TypeScript. Flags slow paths without logging, fast paths doing I/O, decision points without routing, async boundaries missing the adsa_path log line, and invalid {adsa_path, adsa_area} shapes. Auto-fix safe insertions. Install as pre-commit hook. Stable --json for AI agents. Zero telemetry. MIT.",
   "license": "MIT",
   "author": "stapesco <github@stapes.co.za>",
@@ -45,6 +45,7 @@
       "types": "./dist/lib/instrument.d.ts",
       "import": "./dist/lib/instrument.js"
     },
+    "./dist/*": "./dist/*",
     "./package.json": "./package.json"
   },
   "files": [
