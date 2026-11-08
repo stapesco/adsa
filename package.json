@@ -34,6 +34,19 @@
   "bin": {
     "stapes-adsa": "dist/cli.js"
   },
+  "main": "./dist/lib/instrument.js",
+  "types": "./dist/lib/instrument.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/lib/instrument.d.ts",
+      "import": "./dist/lib/instrument.js"
+    },
+    "./lib/instrument": {
+      "types": "./dist/lib/instrument.d.ts",
+      "import": "./dist/lib/instrument.js"
+    },
+    "./package.json": "./package.json"
+  },
   "files": [
     "dist",
     "README.md",
