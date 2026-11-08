@@ -40,8 +40,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - The `--json` schema is unchanged. The linter produces byte-identical
   output before and after the upgrade.
-- `v2.0.0` remains reserved for the runtime instrumentation and
-  OpenTelemetry work described in `ROADMAP-V2.md`.
 
 ## [1.0.0] - 2026-09-01
 
