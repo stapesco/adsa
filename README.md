@@ -52,7 +52,7 @@ commit. Warnings print and let the commit pass.
 
 ```text
 $ npx stapes-adsa
-stapes-adsa@1.0.0
+stapes-adsa@1.1.0
 
 ✗ fast-path-with-io        1 finding(s)
   src/auth/verify.ts:12:1
@@ -76,8 +76,8 @@ npx stapes-adsa --json | jq '.exitCode, .findings[].message'
 ```json
 {
   "startedAt": "2026-09-01T10:49:45.195Z",
-  "tool": "stapes-adsa@1.0.0",
-  "version": "1.0.0",
+  "tool": "stapes-adsa@1.1.0",
+  "version": "1.1.0",
   "exitCode": 1,
   "checkCount": 5,
   "failed": 1,
@@ -241,7 +241,8 @@ during `--fix-confirm`.
 ## What we measured
 
 On 2026-09-01 we ran `stapes-adsa@1.0.0` against two production TypeScript services
-before announcing it. Both repos had not adopted ADSA yet.
+before announcing it. The numbers below are from that run. Both repos had not
+adopted ADSA yet.
 
 | Repo | .ts files | LoC | Findings | Density |
 |---|---|---|---|---|

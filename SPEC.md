@@ -33,7 +33,7 @@ Definition of done for v1:
 - `SKILL.md` triggers the framework in Claude Code eval cases (≥4/5 correct application).
 - README leads with `## Why` (Golden Circle) and includes 3-4 worked examples.
 - `npm test` exits 0. `npm run build` exits 0. SkillSpector scan exits 0.
-- Tagged v1.0.0, published to npm with provenance, GitHub release cut.
+- Tagged and published to npm with provenance, GitHub release cut.
 
 ## Out of scope
 
