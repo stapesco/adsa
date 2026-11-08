@@ -26,6 +26,11 @@ beforeAll(() => {
   workDir = mkdtempSync(join(tmpdir(), "stapes-adsa-exports-"));
   consumerDir = join(workDir, "consumer");
 
+  // Build first. `dist/` is gitignored and the CI test job runs the suite
+  // before `npm run build`, so a pack without this step produces a tarball
+  // with no dist/ and every import below fails.
+  execFileSync("npm", ["run", "build"], { cwd: repoRoot, encoding: "utf8" });
+
   const tarball = execFileSync(
     "npm",
     ["pack", "--silent", "--pack-destination", workDir, repoRoot],
