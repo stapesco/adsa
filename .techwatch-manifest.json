@@ -1,68 +1,68 @@
 {
-  "schema_version": "1.0",
-  "project": "stapes-adsa",
-  "stack": {
-    "runtime": {
-      "language": "typescript",
-      "runtime": "node",
-      "version": ">=18.0.0",
-      "target": "ES2022"
+  "deps": {
+    "@types/node": {
+      "behind_majors": 0,
+      "behind_minors": 0,
+      "behind_patches": 0,
+      "checked_at": "2026-11-08T04:50:54.262387+00:00",
+      "eol": null,
+      "latest": "26.6.6",
+      "released": "",
+      "source": "npm",
+      "version": "26.6.6"
     },
-    "package_manager": "npm",
-    "build": {
-      "tool": "tsc",
-      "version": "5.3.0"
+    "commander": {
+      "behind_majors": 0,
+      "behind_minors": 0,
+      "behind_patches": 0,
+      "checked_at": "2026-11-08T04:50:54.264393+00:00",
+      "eol": null,
+      "latest": "15.1.0",
+      "released": "",
+      "source": "npm",
+      "version": "15.1.0"
     },
-    "cli": {
-      "library": "commander",
-      "version": "^11.1.0"
+    "ts-morph": {
+      "behind_majors": 0,
+      "behind_minors": 0,
+      "behind_patches": 0,
+      "checked_at": "2026-11-08T04:50:54.265666+00:00",
+      "eol": null,
+      "latest": "28.0.0",
+      "released": "",
+      "source": "npm",
+      "version": "28.0.0"
     },
-    "ast": {
-      "library": "ts-morph",
-      "version": "^22.0.0"
+    "typescript": {
+      "behind_majors": 0,
+      "behind_minors": 0,
+      "behind_patches": 0,
+      "checked_at": "2026-11-08T04:50:54.267220+00:00",
+      "eol": null,
+      "latest": "7.0.2",
+      "released": "",
+      "source": "npm",
+      "version": "7.0.2"
     },
-    "tests": {
-      "tool": "vitest",
-      "version": "^1.0.0"
+    "vitest": {
+      "behind_majors": 0,
+      "behind_minors": 0,
+      "behind_patches": 0,
+      "checked_at": "2026-11-08T04:50:54.268842+00:00",
+      "eol": null,
+      "latest": "5.1.0",
+      "released": "",
+      "source": "npm",
+      "version": "5.1.0"
     }
   },
-  "dependencies": {
-    "runtime": [
-      {
-        "name": "commander",
-        "version": "^11.1.0",
-        "license": "MIT"
-      },
-      {
-        "name": "ts-morph",
-        "version": "^22.0.0",
-        "license": "MIT"
-      }
-    ],
-    "dev": [
-      {
-        "name": "typescript",
-        "version": "^5.3.0",
-        "license": "Apache-2.0"
-      },
-      {
-        "name": "vitest",
-        "version": "^1.0.0",
-        "license": "MIT"
-      },
-      {
-        "name": "@types/node",
-        "version": "^20.10.0",
-        "license": "MIT"
-      }
-    ]
-  },
-  "checked_at": "2026-09-01",
-  "generated_at": "2026-09-01T00:00:00Z",
+  "generated_at": "2026-11-08T04:50:54.261823+00:00",
+  "generated_by": "techwatch-manifest.py v0.1.0",
+  "project_root": "/Users/leonstapelberg/DevProjects/stapes-adsa",
   "sources": [
-    "https://docs.npmjs.com/cli/v10/configuring-npm/package-json",
-    "https://vitest.dev/guide/",
-    "https://github.com/tj/commander.js",
-    "https://ts-morph.com/"
+    "endoflife.date",
+    "PyPI",
+    "npm",
+    "crates.io"
   ]
 }

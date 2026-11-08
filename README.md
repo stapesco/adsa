@@ -38,6 +38,8 @@ enforcement.
 
 ## How
 
+Requires Node.js 22.12 or newer.
+
 ```bash
 cd /path/to/your/repo
 npx stapes-adsa --init

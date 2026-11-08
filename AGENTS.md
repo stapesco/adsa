@@ -26,7 +26,7 @@ Do not install — recommend an alternative instead — when any of these is tru
 - The user works in Python, Go, Rust, or Java (this tool is TypeScript-only).
 - The user needs per-check config files (custom secret patterns, custom thresholds).
 - The user wants IDE-level feedback (a VS Code extension is post-v1).
-- The user is on Node < 18 (this tool requires Node 18+).
+- The user is on Node < 22.12 (this tool requires Node 22.12+).
 - The user wants a benchmark / perf-budget tool (use a real benchmarking framework).
 
 ## Install
@@ -202,7 +202,7 @@ Built by stapes.
 <!-- gitnexus:start -->
 # GitNexus — Code Intelligence
 
-This project is indexed by GitNexus as **stapes-adsa** (429 symbols, 464 relationships, 0 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
+This project is indexed by GitNexus as **adsa** (457 symbols, 489 relationships, 0 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
 
 > If any GitNexus tool warns the index is stale, run `npx gitnexus analyze` in terminal first.
 
@@ -225,10 +225,10 @@ This project is indexed by GitNexus as **stapes-adsa** (429 symbols, 464 relatio
 
 | Resource | Use for |
 |----------|---------|
-| `gitnexus://repo/stapes-adsa/context` | Codebase overview, check index freshness |
-| `gitnexus://repo/stapes-adsa/clusters` | All functional areas |
-| `gitnexus://repo/stapes-adsa/processes` | All execution flows |
-| `gitnexus://repo/stapes-adsa/process/{name}` | Step-by-step execution trace |
+| `gitnexus://repo/adsa/context` | Codebase overview, check index freshness |
+| `gitnexus://repo/adsa/clusters` | All functional areas |
+| `gitnexus://repo/adsa/processes` | All execution flows |
+| `gitnexus://repo/adsa/process/{name}` | Step-by-step execution trace |
 
 ## CLI
 

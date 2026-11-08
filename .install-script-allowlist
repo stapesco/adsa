@@ -1,0 +1,23 @@
+# Install-script allowlist.
+#
+# Format: <package-name>  # reason
+#
+# A dependency listed here has been reviewed and its install, preinstall,
+# postinstall, prepare, and prepublish lifecycle scripts are known to be
+# either absent or safe to run at install time.
+#
+# As of the 2026-11-08 dependency upgrade, no package in the tree of
+# stapes-adsa declares an install, preinstall, or postinstall lifecycle
+# script. The entries below are the direct dependencies, each verified
+# script-free, so that a future version bump that introduces a lifecycle
+# script has to be reviewed deliberately rather than silently accepted.
+#
+# The transitive tree is verified separately by scanning node_modules for
+# any package declaring those scripts. That scan returned no matches.
+
+commander  # CLI argument parser. No lifecycle scripts. MIT.
+ts-morph  # TypeScript AST wrapper. No lifecycle scripts. MIT.
+typescript  # Compiler. Dev-only. No lifecycle scripts. Apache-2.0.
+vitest  # Test runner. Dev-only. No lifecycle scripts. MIT.
+@types/node  # Type declarations. Dev-only. No lifecycle scripts. MIT.
+minimatch  # Transitive via ts-morph, pinned by overrides. No lifecycle scripts. MIT.
