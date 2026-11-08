@@ -55,7 +55,7 @@ only our marker block, leaves Husky / lefthook / etc. intact.
 Default (human):
 
 ```
-stapes-adsa@1.1.0
+stapes-adsa@1.1.1
 
 ✗ fast-path-with-io        1 finding(s)
   src/auth/verify.ts:12:1
@@ -70,8 +70,8 @@ stapes-adsa@1.1.0
 ```json
 {
   "startedAt": "2026-09-01T10:49:45.195Z",
-  "tool": "stapes-adsa@1.1.0",
-  "version": "1.1.0",
+  "tool": "stapes-adsa@1.1.1",
+  "version": "1.1.1",
   "exitCode": 1,
   "checkCount": 5,
   "failed": 1,
@@ -166,7 +166,7 @@ The other three checks (`fast-path-with-io`, `decision-router`, `log-schema`) ar
 }
 ```
 
-## Known limitations (v1.1.0)
+## Known limitations (v1.1.1)
 
 - TypeScript only. No Python, Go, Rust, Java support.
 - No per-check config files. The five checks have fixed heuristics.
