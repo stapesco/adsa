@@ -33,6 +33,32 @@ We fix issues because they're bugs, not because we're buying silence.
 If you're not sure whether something is a security issue, report it.
 We'll triage and let you know.
 
+## Known transitive advisory
+
+`npm audit` in a project that installs `stapes-adsa` reports four
+moderate findings. They are all one issue, not four.
+
+The chain is `stapes-adsa` → `ts-morph` → `@ts-morph/common` → `minimatch`.
+The advisory is [GHSA-g3hv-75wg-m249](https://github.com/advisories/GHSA-g3hv-75wg-m249),
+a denial of service through glob-part amplification, and it affects
+`minimatch` 7.0.0 through 11.0.0.
+
+`@ts-morph/common` declares `minimatch: ^10.0.1`. The 10.x line has no
+fixed release, so the advisory cannot be cleared by upgrading
+`ts-morph`. The fix landed in `minimatch` 11.0.1.
+
+The advisory is not reachable through the linter. `stapes-adsa` walks the
+file tree itself with `readdirSync` and calls `addSourceFileAtPath` with
+one explicit path. It never calls `addSourceFilesAtPaths` and never
+passes a glob pattern. The `minimatch` code in `@ts-morph/common` is
+reachable only through `matchGlobs`, which the linter never enters. A
+traced run of `addSourceFileAtPath` makes zero `minimatch` calls.
+
+This repository pins `minimatch` to 11.0.5 through an `overrides` entry,
+which keeps the repository's own tree clean. An `overrides` entry does
+not apply to a consumer's install, so the advisory remains visible in
+consumer `npm audit` output until `@ts-morph/common` widens its range.
+
 ## Why this tool touches sensitive data
 
 `stapes-adsa` reads TypeScript source files and inspects their AST to

@@ -5,6 +5,19 @@ All notable changes to `stapes-adsa` are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.1] - 2026-11-08
+
+### Fixed
+
+- The README and AGENTS.md sample output printed `stapes-adsa@1.0.0`
+  after v1.1.0 shipped. The samples now print the current version.
+
+### Documentation
+
+- `SECURITY.md` now explains the transitive `minimatch` advisory that
+  `npm audit` reports in a consumer's tree, why the linter cannot reach
+  it, and why it cannot be cleared by upgrading `ts-morph`.
+
 ## [1.1.0] - 2026-11-08
 
 ### Changed
